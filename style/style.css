@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Fondamento:ital@0;1&family=Freeman&family=Gruppo&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Tiny5&display=swap");
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100vh;
+  font-family: "Lora", serif;
+  background: linear-gradient(340deg, black, white);
+}
+.title {
+  text-align: center;
+  font-family: gruppo;
+  text-transform: uppercase;
+}
+.card {
+  background: linear-gradient(340deg, black, grey);
+  color: white;
+  padding: 2em;
+  margin: 1em;
+  border-style: groove;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  border-color: white;
+  font-size: large;
+  font-family: gruppo;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search i {
+  padding-left: 10px;
+  cursor: pointer;
+}
+.searching {
+  font-size: larger;
+}
+.search-bar {
+  color: black;
+  font-family: gruppo;
+  background: white;
+  border-radius: 30px;
+  margin-left: 35px;
+  padding: 0.4em 30px;
+}
+button:hover {
+  background: #50bcee;
+}
+h1 .temp {
+  margin: 0;
+}
+.weather.loading {
+  visibility: hidden;
+  position: relative;
+}
+.weather.loading:after {
+  visibility: visible;
+  content: "Loading...";
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 43%;
+}
+#datetime-container {
+  font-family: gruppo;
+  font-size: 24px;
+  color: #e2e2e2;
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 60%;
+  }
+  #datetime-container {
+    font-size: 20px;
+  }
+  .search-bar {
+    width: 70px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .search-bar::placeholder {
+    animation: scroll-placeholder 10s linear infinite;
+  }
+
+  @keyframes scroll-placeholder {
+    0% {
+      text-indent: 0;
+    }
+    100% {
+      text-indent: -100%; /* Adjust this value according to the length of the placeholder text */
+    }
+  }
+}
