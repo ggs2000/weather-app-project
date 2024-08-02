@@ -89,16 +89,4 @@ h1 .temp {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  .search-bar::placeholder {
-    animation: scroll-placeholder 10s linear infinite;
-  }
-
-  @keyframes scroll-placeholder {
-    0% {
-      text-indent: 0;
-    }
-    100% {
-      text-indent: -100%; /* Adjust this value according to the length of the placeholder text */
-    }
-  }
 }
