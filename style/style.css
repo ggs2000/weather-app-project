@@ -8,15 +8,17 @@ body {
   margin: 0;
   height: 100vh;
   font-family: "Lora", serif;
-  background: linear-gradient(340deg, black, white);
+  background: linear-gradient(50deg, black, rgb(88, 88, 88));
 }
 .title {
   text-align: center;
   font-family: gruppo;
+  font-weight: bolder;
   text-transform: uppercase;
+  color: white;
 }
 .card {
-  background: linear-gradient(340deg, black, grey);
+  background: linear-gradient(340deg, black, rgb(70, 67, 67));
   color: white;
   padding: 2em;
   margin: 1em;
@@ -28,6 +30,7 @@ body {
   border-color: white;
   font-size: large;
   font-family: gruppo;
+  font-weight: bolder;
 }
 
 .search {
@@ -74,6 +77,7 @@ h1 .temp {
   color: #e2e2e2;
   text-align: center;
   margin-top: 20px;
+  font-weight: bolder;
 }
 
 @media screen and (max-width: 768px) {
