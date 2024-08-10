@@ -8,7 +8,7 @@ body {
   margin: 0;
   height: 100vh;
   font-family: "Lora", serif;
-  background: linear-gradient(350deg, rgb(48, 47, 47), rgb(0, 0, 0));
+  background: radial-gradient(circle, rgb(95, 94, 94), rgb(17, 16, 16));
 }
 .title {
   text-align: center;
@@ -18,7 +18,7 @@ body {
   color: rgb(255, 255, 255);
 }
 .card {
-  background: linear-gradient(350deg, rgb(48, 47, 47), rgb(0, 0, 0));
+  background: radial-gradient(circle, rgb(75, 73, 73), rgb(19, 19, 19));
   color: white;
   padding: 2em;
   margin: 1em;
