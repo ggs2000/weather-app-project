@@ -22,7 +22,7 @@ body {
   color: white;
   padding: 2em;
   margin: 1em;
-  border-style: groove;
+  border-style: double;
   border-radius: 30px;
   width: 100%;
   max-width: 450px;
@@ -40,6 +40,9 @@ body {
 .search i {
   padding-left: 10px;
   cursor: pointer;
+}
+.search i:hover {
+  color: black;
 }
 .searching {
   font-size: larger;
@@ -92,4 +95,14 @@ h1 .temp {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+}
+
+#preloader {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background: rgb(39, 38, 38) url(/asset/maelstorm-preload.gif) no-repeat center
+    center;
+  background-size: 10%;
+  z-index: 100;
 }
