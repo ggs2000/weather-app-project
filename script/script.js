@@ -3,9 +3,9 @@ let weather = {
   fetchWeather: function (city) {
     fetch(
       "https://api.openweathermap.org/data/2.5/weather?q=" +
-        city +
-        "&units=metric&appid=" +
-        this.apikey
+      city +
+      "&units=metric&appid=" +
+      this.apikey
     )
       .then((response) => response.json())
       .then((data) => this.displayWeather(data));
@@ -43,7 +43,7 @@ document
     }
   });
 
-weather.fetchWeather("Panabo");
+weather.fetchWeather("");
 
 function updateDateTime() {
   const container = document.getElementById("datetime-container");
