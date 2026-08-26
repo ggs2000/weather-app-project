@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Weather APP by gerardo sapida jr.">
+    <meta author="Gerardo G. Sapida Jr." content="">
     <title>Weather-Forcast-app by GGS</title>
     <link rel="stylesheet" href="style/style.css">
-    <link rel="shortcut icon" href="asset/icon-cloud.png" type="image/x-icon">
+    <link rel="shortcut icon" href="asset/cloudrain.png" type="image/x-icon">
     <script src="script/script.js" defer></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +19,14 @@
 
 <body>
 
-    <div id="preloader"></div>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
 
 
     <div class="title">
@@ -45,6 +54,9 @@
         </div>
         <div id="datetime-container"></div>
     </div>
+    <footer class="footer">
+        <p>By Gerardo Sapida Jr.</p>
+    </footer>
 
 
     <script src="script/preloader.js"></script>

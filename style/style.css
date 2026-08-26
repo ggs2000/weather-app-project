@@ -44,7 +44,6 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-
   animation: gradientMove 4s ease infinite;
 }
 
@@ -112,7 +111,9 @@ h2 {
   font-family: gruppo;
   font-size: large;
   font-weight: bold;
-  background: rgba(0, 0, 0, 0);
+  background:
+    linear-gradient(#080c1c, #080c1c) padding-box,
+    linear-gradient(135deg, #b44cff, #4da3ff) border-box;
   border-radius: 30px;
   margin-left: 35px;
   padding: 0.4em 30px;
@@ -152,6 +153,11 @@ h1 .temp {
   font-weight: bolder;
 }
 
+.footer {
+  color: white;
+  font-family: 'raleway';
+}
+
 @media screen and (max-width: 768px) {
   .card {
     width: 60%;
@@ -169,11 +175,70 @@ h1 .temp {
   }
 }
 
-#preloader {
-  height: 100vh;
-  width: 100%;
+.preloader {
   position: fixed;
-  background: rgb(39, 38, 38) url("../asset/maelstorm-preload.gif") no-repeat center center;
-  background-size: 10%;
-  z-index: 100;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #0f172a;
+  z-index: 9999;
+
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+/* Hide preloader */
+.preloader.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Loader */
+.loader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.loader span {
+  width: 12px;
+  height: 12px;
+
+  background: #38bdf8;
+  border-radius: 50%;
+
+  animation: bounce 1.2s infinite ease-in-out;
+}
+
+/* Delay each dot */
+.loader span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.loader span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.loader span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+/* Animation */
+@keyframes bounce {
+
+  0%,
+  80%,
+  100% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
